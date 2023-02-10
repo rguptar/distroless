@@ -10,4 +10,4 @@ RUN npm ci --omit=dev
 FROM mcr.microsoft.com/cbl-mariner/distroless/debug:2.0
 COPY --from=build-env /app /app
 WORKDIR /app
-CMD ["index.js"]
+CMD ["/app/index.js"]
